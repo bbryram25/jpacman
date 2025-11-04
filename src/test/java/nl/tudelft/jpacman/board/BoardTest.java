@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Test cases for the Board class.
+ * Test cases for the {@link Board} class.
  */
 public class BoardTest {
 
     /**
-     * Test creating a valid board with one non-null square.
+     * Test creating a valid {@link Board} with one non-null {@link Square}.
      */
     @Test
     void testBoard() {
@@ -21,7 +21,7 @@ public class BoardTest {
     }
 
     /**
-     * Test creating a board with a null square, expecting an AssertionError.
+     * Test creating a {@link Board} with a null {@link Square}, expecting an {@link AssertionError}.
      */
     @Test
     void testBoardOneNullSquare() {
