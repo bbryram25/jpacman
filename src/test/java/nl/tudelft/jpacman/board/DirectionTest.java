@@ -4,12 +4,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test cases for the Direction enum to verify correct movement deltas.
+ * Test cases for the {@link Direction} enum to verify correct movement deltas.
  */
 public class DirectionTest {
 
     /**
-     * Test that moving north decreases the Y coordinate by 1.
+     * Test that moving {@link Direction#NORTH} decreases the Y coordinate by 1.
      */
     @Test
     void testNorth() {
@@ -18,7 +18,7 @@ public class DirectionTest {
     }
 
     /**
-     * Test that moving south increases the Y coordinate by 1.
+     * Test that moving {@link Direction#SOUTH} increases the Y coordinate by 1.
      */
     @Test
     void testSouth() {
@@ -27,7 +27,7 @@ public class DirectionTest {
     }
 
     /**
-     * Test that moving east increases the X coordinate by 1.
+     * Test that moving {@link Direction#EAST} increases the X coordinate by 1.
      */
     @Test
     void testEast() {
@@ -36,7 +36,7 @@ public class DirectionTest {
     }
 
     /**
-     * Test that moving west decreases the X coordinate by 1.
+     * Test that moving {@link Direction#WEST} decreases the X coordinate by 1.
      */
     @Test
     void testWest() {
