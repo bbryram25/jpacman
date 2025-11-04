@@ -1,15 +1,14 @@
 package nl.tudelft.jpacman.board;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Test cases for the {@link Board} class.
+import static org.assertj.core.api.Assertions.assertThat;
+/***
+ * This is a testcase for  BoardTest
  */
 public class BoardTest {
-
-    /**
-     * Test creating a valid {@link Board} with one non-null {@link Square}.
+    /***
+     * This is a testcase for testBoard
      */
     @Test
     void testBoard() {
@@ -20,8 +19,8 @@ public class BoardTest {
         assertThat(board.invariant()).isTrue();
     }
 
-    /**
-     * Test creating a {@link Board} with a null {@link Square}, expecting an {@link AssertionError}.
+    /***
+     * This is a testcase for testBoardOneNullSquare
      */
     @Test
     void testBoardOneNullSquare() {
