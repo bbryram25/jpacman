@@ -1,7 +1,8 @@
 package nl.tudelft.jpacman.level;
-
+import nl.tudelft.jpacman.PacmanConfigurationException;
 import nl.tudelft.jpacman.board.BoardFactory;
 import nl.tudelft.jpacman.npc.ghost.Blinky;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -24,6 +25,7 @@ public class MapParserTest {
     private LevelFactory levelFactory;
     @Mock
     private Blinky blinky;
+
     /**
      * Test for the parseMap method (good map).
      */
@@ -43,8 +45,25 @@ public class MapParserTest {
         Mockito.verify(levelFactory, Mockito.times(1)).createGhost();
         Mockito.verify(boardFactory, Mockito.atLeastOnce()).createGround();
         Mockito.verify(boardFactory, Mockito.atLeastOnce()).createWall();
-
     }
 
-}
+    /**
+     * Test for the parseMap method (bad map).
+     */
+    @Test
+    public void testParseMapWrong1() {
+        MockitoAnnotations.initMocks(this);
+        assertNotNull(boardFactory);
+        assertNotNull(levelFactory);
 
+        MapParser mapParser = new MapParser(levelFactory, boardFactory);
+        ArrayList<String> badMap = new ArrayList<>();
+        badMap.add("########");
+        badMap.add("#P  X G#");
+        badMap.add("#######");
+
+        Assertions.assertThrows(PacmanConfigurationException.class,
+            () -> mapParser.parseMap(badMap));
+
+    }
+}
