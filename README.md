@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/SERG-Delft/jpacman.svg?branch=master)](https://travis-ci.com/SERG-Delft/jpacman)
 
-## About
+## About  
 
 Pacman-like game used for teaching software testing.
 It exposes students to the use of git, Gradle, JUnit, and mockito.
