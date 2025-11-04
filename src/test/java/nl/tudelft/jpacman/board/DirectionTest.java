@@ -1,18 +1,15 @@
 package nl.tudelft.jpacman.board;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.Test;
 
 /**
- * A very simple (and not particularly useful)
- * test class to have a starting point where to put tests.
- *
- * @author Arie van Deursen
+ * Test cases for the Direction enum to verify correct movement deltas.
  */
 public class DirectionTest {
+
     /**
-     * Do we get the correct delta when moving north?
+     * Test that moving north decreases the Y coordinate by 1.
      */
     @Test
     void testNorth() {
@@ -20,24 +17,26 @@ public class DirectionTest {
         assertThat(north.getDeltaY()).isEqualTo(-1);
     }
 
-    /***
-     * This is a test case for testSouth
+    /**
+     * Test that moving south increases the Y coordinate by 1.
      */
     @Test
     void testSouth() {
         Direction south = Direction.valueOf("SOUTH");
         assertThat(south.getDeltaY()).isEqualTo(1);
     }
-    /***
-     * This is a test case for testEast
+
+    /**
+     * Test that moving east increases the X coordinate by 1.
      */
     @Test
     void testEast() {
         Direction east = Direction.valueOf("EAST");
         assertThat(east.getDeltaX()).isEqualTo(1);
     }
-    /***
-     * This is a test case for testWest
+
+    /**
+     * Test that moving west decreases the X coordinate by 1.
      */
     @Test
     void testWest() {
