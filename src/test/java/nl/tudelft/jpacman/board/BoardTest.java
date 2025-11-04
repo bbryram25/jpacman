@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BoardTest {
 
     /**
-     * This is a testcase for testBoard
+     * This is a testcase for testBoard.
      */
     @Test
     void testBoard() {
@@ -22,7 +22,7 @@ public class BoardTest {
     }
 
     /**
-     * This is a testcase for testBoardOneNullSquare
+     * This is a testcase for testBoardOneNullSquare.
      */
     @Test
     void testBoardOneNullSquare() {
