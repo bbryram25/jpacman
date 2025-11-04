@@ -3,11 +3,12 @@ package nl.tudelft.jpacman.board;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-/***
- * This is a testcase for  BoardTest
+
+/**
+ * Test cases for the Board class.
  */
 public class BoardTest {
-    /***
+    /**
      * This is a testcase for testBoard
      */
     @Test
@@ -19,7 +20,7 @@ public class BoardTest {
         assertThat(board.invariant()).isTrue();
     }
 
-    /***
+    /**
      * This is a testcase for testBoardOneNullSquare
      */
     @Test
