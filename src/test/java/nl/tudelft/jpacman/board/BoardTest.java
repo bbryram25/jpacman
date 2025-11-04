@@ -8,6 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Test cases for the Board class.
  */
 public class BoardTest {
+
     /**
      * This is a testcase for testBoard
      */
