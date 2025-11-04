@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BoardTest {
+    /***
+     * This is a test case for testBoard
+     */
     @Test
     void testBoard() {
         Square s1 = new BasicSquare();
@@ -14,6 +17,9 @@ public class BoardTest {
         assertThat(board.invariant()).isTrue();
     }
 
+    /***
+     * This is a test case for testBoardOneNullSquare
+     */
     @Test
     void testBoardOneNullSquare() {
         Square[][] grid = new Square[1][1];
